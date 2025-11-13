@@ -86,22 +86,23 @@
 															<br> <lowlight>Data&nbsp;Engineering</lowlight> <lowlight>Data&nbsp;Modeling</lowlight>
 														</p>
 														<p>
-															I transformed and loaded scientific plant information to enrich an inventory database.
+															I transformed and loaded taxomomic plant information to enrich an inventory database.
 														</p>
 														<a href="javascript:void(0);" onclick="toggleDetails('database-details', this, 'database-project-wrapper');" id="database-button" class="button default">view project details</a>
 													</div>
 													<div id="database-details" style="display: none; padding-top: 1em;">
 														<p>
 															<h5>My Role:</h5>
-															Volunteer Data Specialist for the Wave Hill Horticulture Department
+															Volunteer Data Specialist for the horticulture department at Wave Hill
 														</p>
 														<p>
 															<h5>Context:</h5>
-															Wave Hill is a non-profit public garden with a Horticultural Inventory database for internal use. Taxonomic information for each database record, such as the native range of a plant, was entered individually based on manual internet lookups.
+															Wave Hill is a non-profit public garden with a horticultural inventory database for internal use. 
+															Taxonomic information for each database record, such as the native range of a plant, was entered individually based on manual internet lookups.
 														</p>
 														<p>
 															<h5>Goal:</h5>
-															I was asked to eliminate the tedious internet lookups by integrating scientific plant information directly in the existing Horticultural Inventory database.
+															I was asked to eliminate the tedious internet lookups by integrating taxonomic plant information directly in the existing horticultural inventory database.
 														</p>
 														<p>
 															<h5>Data Description:</h5>
@@ -116,7 +117,7 @@
 																	</thead>
 																	<tbody>
 																		<tr>
-																			<td>Plant records extracted from<br>the Horticultural Inventory database (DB)</td>
+																			<td>Plant records extracted from<br>the horticultural inventory database (DB)</td>
 																			<td>CSV file</td>
 																			<td>~1,300</td>
 																		</tr>
@@ -179,7 +180,7 @@
 															</div>												
 														<p>
 															<h5>What I Built:</h5>I used Python code to parse scientific plant names into a standard format and join the source datasets. 
-															The joined data was loaded into the Horticultural Inventory database as a new table.
+															The joined data was loaded into the horticultural inventory database as a new table.
 														</p>
 														<p>
 															<ol>
@@ -196,7 +197,7 @@
 														<p>
 															<h5>Deliverables:</h5>
 															<ul>
-																<li>A CSV file of combined USDA and WCVP taxonomic information corresponding to the 1310 unique plant names in the Horticultural Inventory database. This CSV was loaded as a new table in the database. The scientific plant name is the foreign key that allows the taxonomic information to be joined with the original inventory table.</li>
+																<li>A CSV file of combined USDA and WCVP taxonomic information corresponding to the 1300+ unique plant names in the horticultural inventory database. This CSV was loaded as a new table in the database. The scientific plant name is the foreign key that allows the taxonomic information to be joined with the original inventory table.</li>
 																<br>
 																<li>A Python notebook that connects to the database through an API so users can easily add new rows of taxonomic information.</li>
 															</ul>
@@ -204,8 +205,8 @@
 														<p>
 															<h5>Impact:</h5>
 															<ul>
-																<li>Taxonomic information was matched for 96% of the plant records in the Horticultural Inventory. 
-																	This saved 7 hours of manual lookups of the same information, assuming 20 seconds per lookup.</li>
+																<li>Taxonomic information was matched for 96% of the plant records in the horticultural inventory. 
+																	This saved at least 7 hours of manual lookups of the same information, assuming 20 seconds per lookup.</li>
 																<br>
 																<li>Data validation - any unmatched records indiciate potential spelling errors or unaccepted scientific names in the original inventory table.</li>
 																<br>
@@ -512,4 +513,3 @@
 
 	</body>
 </html>
-
