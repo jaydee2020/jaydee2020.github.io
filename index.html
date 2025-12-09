@@ -102,7 +102,7 @@
 														</p>
 														<p>
 															<h5>Goal:</h5>
-															I was asked to eliminate the tedious internet lookups by integrating taxonomic plant information directly in the existing horticultural inventory database.
+															Eliminate the tedious internet lookups by integrating taxonomic plant information directly in the existing horticultural inventory database.
 														</p>
 														<p>
 															<h5>Data Description:</h5>
@@ -244,7 +244,7 @@
 														</p>
 														<p>
 															<h5>Goal:</h5>											
-															I was asked to produce a single, continuous price function that performed better at the extreme ends of the product range. 
+															Produce a single, continuous price function that performs better at the extreme ends of the product range. 
 														</p>
 														<p>
 															<h5>Key Challenge:</h5>
@@ -303,7 +303,7 @@
 											</section>
 										</div>
 
-										<div id="tree-location-project-wrapper"> 
+										<div id="tree-coordinate-project-wrapper"> 
 											<section id="TreeLocation">
 												<article>
 													<a class="image"><img src="images/tree_coord_validate.png" alt="" /></a>
@@ -312,8 +312,99 @@
 														<h4>Tree Coordinate Validation</h4>
 														<p><lowlight>Python</lowlight> <lowlight>Pandas</lowlight> <lowlight>QGIS</lowlight> <lowlight>Data&nbsp;Transformation</lowlight></p>
 														<p>I reconciled two sets of geographic data to pinpoint tree locations in a public garden.</p>
-														<p>(Details coming soon.)</p>
-													</div>												
+														<a href="javascript:void(0);" onclick="toggleDetails('tree-coordinate-details', this, 'tree-coordinate-project-wrapper');" id="tree-coordinate-button" class="button default">view project details</a>
+													</div>
+													<div id="tree-coordinate-details" style="display: none; padding-top: 1em;">
+														<p>
+															<h5>My Role:</h5>
+															Volunteer Data Specialist for the horticulture department at Wave Hill
+														</p>
+														<p>
+															<h5>Context:</h5>
+															Wave Hill is a non-profit public garden in the process of mapping its plant collection for a public-facing database. 
+															Some database records already had geographic coordinates, but many did not.
+															A professional, more precise GPS survey of trees in the garden was commissioned.
+														</p>
+														<p>
+															<h5>Goal:</h5>
+															Update the database records with the geo coordinates from the GPS survey.
+														</p>
+														<p>
+															<h5>Data Description:</h5>
+															<div class="table-wrapper">
+																<table>
+																	<thead>
+																		<tr>
+																			<th>Source Dataset</th>
+																			<th>Data Format</th>
+																			<th>Size (rows)</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Plant records extracted from<br>the public-facing horticultural database</td>
+																			<td>CSV file</td>
+																			<td>~3,100</td>
+																		</tr>
+																		<tr>
+																			<td>Longitude, Latitude, and scientific name<br>from the GPS tree survey</td>
+																			<td>CSV file</td>
+																			<td>~600</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</p>
+														<p>
+															<h5>Key Challenge:</h5>
+															Matching the two source datasets could not be fully automated because neither was comprehensive and there were discrepancies in the scientific classification of trees between each dataset.
+															Therefore, I needed to create an efficient presentation of potential matches to be reviewed by the horticulturalist. 
+														</p>											
+														<p>
+															<h5>What I Built:</h5>
+															I processed the datasets and presented them visually as a interactive QGIS map. 
+															The map functioned as a data selection tool because it simultaneously showed geo coordinates from the survey and database, 
+															along with likely matches from the database that had no coordinates.
+														</p>
+														<p>
+															<ol>
+																<li>I cleaned and standardized the two datasets using Pandas dataframes and QGIS. 
+																	This included parsing scientific tree names, assigning garden locations to geo coordinates, 
+																	and finding the centroids of garden locations.</li>
+														   		<br>
+																<li>I created Mutually Exclusive, Collectively Exhaustive (MECE) subsets of database records, 
+																	which were divided by GPS coordinates, garden location, and scientific name.</li>
+														   		<br>
+																<li>I mapped the survey geo coordinates and the databse MECE subsets in QGIS as layers. 
+																	Map points could be manually connected in the underlying data to indicate a match.</li>
+															</ol>
+														</p>
+														<p>
+															<span><img src="images/tree-coordinate-map.png" alt="tree coordinate map detail" width="100%"/></span>
+														</p>
+														<p>
+															<h5>Deliverables:</h5>
+															<ul>
+																<li>An interactive map of processed data.</li>
+																<br>
+																<li>After connections are made in the underlying datasets, 
+																	updated coordinates are extracted and merged into the public-facing database.</li>
+															</ul>
+														</p>
+														<p>
+															<h5>Impact:</h5>
+															<ul>
+																<li>The interactive, visual presentation made it easy for the horticulturalist to confirm matches. 
+																	They could could visually scan the map, apply their knowledge of the plant collection, and eliminate or confirm points using the logic of the MECE subsets.
+																</li>
+																<br>
+																<li>Of the 595 trees in the survey, the horticulturalist was presented with 128 highly likely database matches for review, 
+																	composed of 84 records with preexisting coordinates and 44 without. 
+																</li>																
+															</ul>
+														</p>															
+														<a href="javascript:void(0);" onclick="toggleDetails('tree-coordinate-details', document.getElementById('tree-coordinate-button'), 'tree-coordinate-project-wrapper');" class="button small">hide project details</a>			
+													</div>
 												</article>
 											</section>
 										</div>																				
@@ -472,7 +563,7 @@
 							<section id="footer">
 								<div class="container">
 									<ul class="copyright">
-										<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										<li>&copy; Untitled. All rights reserved.</li><li>Design: HTML5 UP</li>
 									</ul>
 								</div>
 							</section>
